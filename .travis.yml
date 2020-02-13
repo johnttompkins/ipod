@@ -1,0 +1,9 @@
+language: python
+dist: bionic
+python: "3.8"
+install:
+- pip3 install pre-commit
+script:
+- pre-commit run --all-files --verbose
+after_failure:
+- git diff
